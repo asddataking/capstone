@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib.auth import login, authenticate
 from .forms import SignupForm
 
 def index(request):
@@ -6,7 +7,7 @@ def index(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
             user.refresh_from_db()  
@@ -21,5 +22,5 @@ def signup(request):
             # redirect user to home page
             return redirect('/')
     else:
-        form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+        form = SignupForm()
+    return render(request, 'registration/signup.html', {'form': form})

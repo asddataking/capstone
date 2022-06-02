@@ -2,13 +2,14 @@
     
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    {% block title %}<title>Poopster </title>{% endblock %}
   </head>
   <body>
+    {% block content %}
     <div id="app">
     [[ message ]]
     </div>
-    
+    {% endblock %}
     
     
     <script>
