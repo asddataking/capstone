@@ -71,7 +71,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/" 
 AUTH_USER_MODEL = 'myapp.User'
+STATIC_URL = 'myapp.static'
 
 
 
