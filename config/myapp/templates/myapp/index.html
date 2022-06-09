@@ -2,24 +2,77 @@
 <head>
     
     <script src="https://unpkg.com/vue@3"></script>
-  </head>
+</head>
   <body>
     
     <div id="app">
       {% block content %} 
       
       
+       <!--- Hero Section-->
       
-      
-      <section id="hero">
-      <p>
+      <section id="hero" class="container mx-auto bg-white font-sans">
+        <div class="flex flex-row-reverse pt-56">
+         <!--- Lead Generation Form-->
+          <div class="basis-1/2 pl-5">
+          <h2 class=""> Get a free quote </h2>
         <form @submit.prevent ='emailLead'>
-				<input type="text" v-model="inputText" placeholder="Please Enter your Name">
-				<button type="submit">submit</button>
+				<label for="firstName">First Name </label>
+          <input type="text" v-model="firstName" placeholder="Please Enter your Name">
+        <br>
+        <label for="email">Email Address </label>
+        <input type="text" v-model="email" placeholder="Please Enter your Email Address">
+        <br>
+        <label for="selected">Please choose # of Dogs</label>
+        <select v-model="selected">
+          <option disabled value="">Please select one</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>3 +</option>
+        </select>
+        <br>
+				<button v-on:click="leadsubmission" class="rounded-full bg-cyan-50 text-xl font-semibold" type="submit">submit</button>
 			  </form>
-      </p>
+        </div>
+
+
+      <div class="basis-1/2 bg-orange-400">
+        <h2 class="text-3xl pb-8 text-center">
+          Let us Pickup the poo, so 
+          you don't have to! 
+          <br>
+        </h2>
+        <div class="flex justify-center">
+      <button class="rounded-full bg-green-700 font-sans text-xl">Learn More</button>
+        </div>
+      </section>
+
+      <!--- Extra section with image-->
+      
+      
+      <section id="section2" class="pt-20 flex-row">
+        <div class="basis-1">
+          <div class="flex absolute h-full w-full justify-left pt-40">
+          <h3 class="text-white text-center font-bold text-2xl font-sans">Experience a Clean Yard</h3>
+        </div>
+        <div class="flex">
+          <img src="static/dogball.jpg" class="max-w-full h-auto" alt="dog with ball outside"/>
+        </div>
+      </div>
+       
+       
+       
+       
+    
+       
 
       </section>
+
+      
+      
+
+
       {% endblock  %}
     </div>
     
@@ -29,13 +82,15 @@
         // the data property is a function that returns an object
         data() {
           return {
-            inputText:'',
+            firstName:'',
+            email: '',
+            selected: '',
             
           }
            
         },
         methods: {
-          emailLead (){
+          emailLead (event){
 
 
           }
