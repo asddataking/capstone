@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %} 
-<h2>Log In</h2>
+<div class="flex flex-row pt-10"></div>
+<div class="basis-2 flex-col font-sans text-xl">
+<h2>Please Log In</h2>
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Log In</button>
+  <button class="bg-orange-700 rounded-full" type="submit">Log In</button>
 </form>
 
-<a href="/signup">Don't have an account? Click here to Signup</a>
-
+<a href="/signup" class="bg-orange-200">Don't have an account? Click here to Signup</a>
+</div>
+</div>
 {% endblock %}

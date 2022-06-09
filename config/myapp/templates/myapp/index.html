@@ -11,12 +11,12 @@
       
        <!--- Hero Section-->
       
-      <section id="hero" class="container mx-auto bg-white font-sans">
+      <section id="hero" class="mx-auto font-sans">
         <div class="flex flex-row-reverse pt-56">
          <!--- Lead Generation Form-->
           <div class="basis-1/2 pl-5">
-          <h2 class=""> Get a free quote </h2>
-        <form @submit.prevent ='emailLead'>
+          <h2 class="flex justify-center text-2xl"> Get a free quote </h2>
+        <form @submit.prevent ='emailLead' class="text-2xl">
 				<label for="firstName">First Name </label>
           <input type="text" v-model="firstName" placeholder="Please Enter your Name">
         <br>
@@ -32,19 +32,21 @@
           <option>3 +</option>
         </select>
         <br>
-				<button v-on:click="leadsubmission" class="rounded-full bg-cyan-50 text-xl font-semibold" type="submit">submit</button>
+        <div class="flex justify-center">
+				<button v-on:click="leadsubmission" class="rounded-full bg-orange-200 text-xl font-semibold" type="submit">submit</button>
+      </div>
 			  </form>
         </div>
 
 
-      <div class="basis-1/2 bg-orange-400">
+      <div class="basis-1/2">
         <h2 class="text-3xl pb-8 text-center">
-          Let us Pickup the poo, so 
+          Let us Pickup the Poo, so 
           you don't have to! 
           <br>
         </h2>
         <div class="flex justify-center">
-      <button class="rounded-full bg-green-700 font-sans text-xl">Learn More</button>
+      <button class="rounded-full bg-orange-200 font-sans text-xl font-semibold">Learn More</button>
         </div>
       </section>
 
@@ -54,7 +56,7 @@
       <section id="section2" class="pt-20 flex-row">
         <div class="basis-1">
           <div class="flex absolute h-full w-full justify-left pt-40">
-          <h3 class="text-white text-center font-bold text-2xl font-sans">Experience a Clean Yard</h3>
+          <h3 class="text-white text-center font-bold text-3xl font-sans">Experience a Clean Yard</h3>
         </div>
         <div class="flex">
           <img src="static/dogball.jpg" class="max-w-full h-auto" alt="dog with ball outside"/>
@@ -69,7 +71,19 @@
 
       </section>
 
-      
+      <section>
+        <div class="flex flex-row bg-orange-200 justify-center pt-5">
+         <div class="">
+          <h3 class="text-4xl font-sans font-semibold"> Our Blog </h3>
+        </div> 
+
+ 
+
+
+
+        </div>
+
+      </section>
       
 
 
