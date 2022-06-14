@@ -14,12 +14,6 @@ As a pet owner, I want to save time by booking online.
 ## Tasks 
 - Create Django form for easy inquiries in the Hero section of website
 
-### Additional USER Features
-Up - sells
-Subsctription services
-User would like to add what "size yard" they have
-User would like in-website payment for services
-
 
 ## Admin Stories: 
 As an admin of this web application, I'd like to see the # of inquiry forms displayed easily. 
@@ -30,6 +24,10 @@ As an admin of this web application, I'd like to see the # of inquiry forms disp
 
 ### Additional Feature
 Admin Dashboard with number of submitted forms aka leads. 
+Up - sells
+Subsctription services
+User would like to add what "size yard" they have
+User would like in-website payment for services
 
 # Data Model:
 
@@ -63,9 +61,10 @@ Admin Dashboard with number of submitted forms aka leads.
 - Build Django Forms 
 - Create all neccessary pages (app pages)
 - Start CSS
+- Work on User Authentication w/Django Forms
+- Make sure I'm receiving lead submission details
 
 ## Week 3:
-- Work on User Authentication w/Django Forms
 - Modify CSS
 - Add information for cat's if time allows
 

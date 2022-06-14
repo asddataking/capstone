@@ -1,30 +1,32 @@
 {% extends "base.html" %}
+{% block content %} 
 <head>
     
-    <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/vue@3"></script>
 </head>
-  <body>
+  <body class="bg-gray-200">
     
     <div id="app">
-      {% block content %} 
+      
       
       
        <!--- Hero Section-->
+
       
-      <section id="hero" class="mx-auto font-sans">
-        <div class="flex flex-row-reverse pt-56">
+      <section id="hero" class="mx-auto font-sans p-8">
+        <div class="flex flex-row-reverse">
          <!--- Lead Generation Form-->
           <div class="basis-1/2 pl-5">
-          <h2 class="flex justify-center text-2xl"> Get a free quote </h2>
+          <h2 class="flex justify-center text-2xl py-5"> Get a free quote </h2>
         <form @submit.prevent ='emailLead' class="text-2xl">
-				<label for="firstName">First Name </label>
-          <input type="text" v-model="firstName" placeholder="Please Enter your Name">
+				
+          <input type="text" v-model="firstName" placeholder="Please Enter your First Name">
         <br>
-        <label for="email">Email Address </label>
+        
         <input type="text" v-model="email" placeholder="Please Enter your Email Address">
         <br>
         <label for="selected">Please choose # of Dogs</label>
-        <select v-model="selected">
+        <select v-model="selected" placeholder="Please Enter # of Dogs">
           <option disabled value="">Please select one</option>
           <option>1</option>
           <option>2</option>
@@ -32,63 +34,86 @@
           <option>3 +</option>
         </select>
         <br>
-        <div class="flex justify-center">
-				<button v-on:click="leadsubmission" class="rounded-full bg-orange-200 text-xl font-semibold" type="submit">submit</button>
+        <div class="flex justify-center mt-4">
+				<button class="rounded-full bg-orange-200 text-xl font-semibold px-4 py-2" type="Submit">submit</button>
       </div>
 			  </form>
         </div>
 
 
-      <div class="basis-1/2">
+      <div class="basis-1/2 pt-6">
         <h2 class="text-3xl pb-8 text-center">
           Let us Pickup the Poo, so 
           you don't have to! 
           <br>
         </h2>
         <div class="flex justify-center">
-      <button class="rounded-full bg-orange-200 font-sans text-xl font-semibold">Learn More</button>
+      <button class="rounded-full bg-orange-200 font-sans text-xl font-semibold px-4 py-2">Learn More</button>
         </div>
       </section>
 
       <!--- Extra section with image-->
       
       
-      <section id="section2" class="pt-20 flex-row">
+      <section id="section2" class="pt-20">
+        <h3 class="text-white font-bold text-3xl font-sans absolute pl-10 mt-24 fixed">Experience a Clean Yard</h3>  
         <div class="basis-1">
-          <div class="flex absolute h-full w-full justify-left pt-40">
-          <h3 class="text-white text-center font-bold text-3xl font-sans">Experience a Clean Yard</h3>
-        </div>
-        <div class="flex">
-          <img src="static/dogball.jpg" class="max-w-full h-auto" alt="dog with ball outside"/>
-        </div>
-      </div>
-       
+          <img src="static/dogball.jpg" class="max-w-full h-auto shadow-sm rounded-xl" alt="dog with ball outside"/>
+          </div>
+    </section>
        
        
        
     
        
+<!--- Blog w/content-->
 
-      </section>
-
-      <section>
-        <div class="flex flex-row bg-orange-200 justify-center pt-5">
-         <div class="">
-          <h3 class="text-4xl font-sans font-semibold"> Our Blog </h3>
-        </div> 
-
- 
-
+      <section class=" bg-orange-200">
+        
+         <div class="flex justify-center pt-14">
+          <h3 class="text-4xl font-sans font-semibold">  Articles + Tips </h3>
+        </div>
+        <div class="flex pt-5 px-5 py-5">
+          <ul>
+            <li>
+              <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md light:bg-white dark:border-gray-700">
+                <a href="#">
+                    <img class="rounded-t-md" src="/static/dogcar.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-black">Sample Blog Article</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Learn Everything you'd like to learn about our waste removal services</p>
+                    <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+            </li>
+  
+          </ul>
 
 
         </div>
+      
+
+
+      </section>
+      <!--- Referrel -->
+      <section id="referrel">
+        <div class="bg-green-700 flex-auto pt-10">
+          <div class="text-center font-sans text-4xl py-10 text-white font-bold">
+          <span>Refer your neighbor and earn $5 off your next service! </span>
+        </div>
+        </div>
+
 
       </section>
       
 
 
-      {% endblock  %}
-    </div>
     
     
     <script>
@@ -99,12 +124,22 @@
             firstName:'',
             email: '',
             selected: '',
+            leadList: [],
             
           }
            
         },
         methods: {
           emailLead (event){
+            let lead = {
+              leadName: this.firstName,
+              leadEmail: this.email,
+              numDogs: this.selected
+            }
+            this.leadList.push(lead)
+            console.log(lead)
+            console.log(this.leadList)
+
 
 
           }
@@ -114,8 +149,9 @@
       
     }
       
-      Vue.createApp(App).mount('#app')
+    Vue.createApp(App).mount('#app')
     </script>
+    {% endblock content %}
     
   </body>
   
