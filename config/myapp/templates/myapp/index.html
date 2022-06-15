@@ -4,7 +4,7 @@
     
   <script src="https://unpkg.com/vue@3"></script>
 </head>
-  <body class="bg-gray-200">
+  <body>
     
     <div id="app">
       
@@ -16,14 +16,14 @@
       <section id="hero" class="mx-auto font-sans p-8">
         <div class="flex flex-row-reverse">
          <!--- Lead Generation Form-->
-          <div class="basis-1/2 pl-5">
-          <h2 class="flex justify-center text-2xl py-5"> Get a free quote </h2>
+          <div class="basis-1/2 pl-5 bg-slate-50">
+          <h2 class="flex justify-center text-2xl py-5"> Get a free quote Today </h2>
         <form @submit.prevent ='emailLead' class="text-2xl">
 				
-          <input type="text" v-model="firstName" placeholder="Please Enter your First Name">
+          <input class="mb-3"type="text" v-model="firstName" size="40" placeholder="Please Enter your First Name">
         <br>
         
-        <input type="text" v-model="email" placeholder="Please Enter your Email Address">
+        <input class="mb-3" type="text" v-model="email" size="40" placeholder="Please Enter your Email Address">
         <br>
         <label for="selected">Please choose # of Dogs</label>
         <select v-model="selected" placeholder="Please Enter # of Dogs">
@@ -35,20 +35,20 @@
         </select>
         <br>
         <div class="flex justify-center mt-4">
-				<button class="rounded-full bg-orange-200 text-xl font-semibold px-4 py-2" type="Submit">submit</button>
+				<button class="rounded-full bg-amber-600 text-xl font-semibold px-4 py-2" type="Submit">Submit</button>
       </div>
 			  </form>
         </div>
 
 
-      <div class="basis-1/2 pt-6">
-        <h2 class="text-3xl pb-8 text-center">
+      <div class="basis-1/2 pt-6 bg-green-400">
+        <h2 class="text-3xl pb-8 text-center font-bold">
           Let us Pickup the Poo, so 
           you don't have to! 
           <br>
         </h2>
-        <div class="flex justify-center">
-      <button class="rounded-full bg-orange-200 font-sans text-xl font-semibold px-4 py-2">Learn More</button>
+        <div class="flex justify-center pt-6">
+      <button class="rounded-full bg-amber-600 font-sans text-xl font-semibold px-4 py-4">Learn More</button>
         </div>
       </section>
 
@@ -56,7 +56,7 @@
       
       
       <section id="section2" class="pt-20">
-        <h3 class="text-white font-bold text-3xl font-sans absolute pl-10 mt-24 fixed">Experience a Clean Yard</h3>  
+        <h3 class="text-white font-bold text-3xl font-sans absolute pl-10 mt-24">Experience a Clean Yard</h3>  
         <div class="basis-1">
           <img src="static/dogball.jpg" class="max-w-full h-auto shadow-sm rounded-xl" alt="dog with ball outside"/>
           </div>
@@ -67,18 +67,17 @@
     
        
 <!--- Blog w/content-->
-
-      <section class=" bg-orange-200">
+      <section class=" bg-amber-600">
         
          <div class="flex justify-center pt-14">
-          <h3 class="text-4xl font-sans font-semibold">  Articles + Tips </h3>
+          <h3 class="text-4xl font-sans font-semibold bg-white">  Articles + Tips </h3>
         </div>
-        <div class="flex pt-5 px-5 py-5">
-          <ul>
-            <li>
+        <div class="flex pt-5 px-5 py-5 flex-row space-x-4">
+          
+            
               <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md light:bg-white dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-md" src="/static/dogcar.jpg" alt="" />
+                    <img class="rounded-t-md object-contain h-15 w-95" src="/static/dogcar.jpg" alt="" />
                 </a>
                 <div class="p-5">
                     <a href="#">
@@ -91,9 +90,26 @@
                     </a>
                 </div>
             </div>
-            </li>
+            
+            
+              <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md light:bg-white dark:border-gray-700">
+                <a href="#">
+                    <img class="rounded-t-md object-contain h-15 w-95" src="/static/dogcar.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-black">Sample Blog Article</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Learn Everything you'd like to learn about our waste removal services</p>
+                    <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
   
-          </ul>
+          
 
 
         </div>
@@ -103,8 +119,8 @@
       </section>
       <!--- Referrel -->
       <section id="referrel">
-        <div class="bg-green-700 flex-auto pt-10">
-          <div class="text-center font-sans text-4xl py-10 text-white font-bold">
+        <div class="bg-green-400 flex-auto pt-10">
+          <div class="text-center font-sans text-4xl py-10 font-bold">
           <span>Refer your neighbor and earn $5 off your next service! </span>
         </div>
         </div>
