@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %} 
+<div class="flex-row">
 <div clas="flex">
-<h2 class="font-bold font-sans text-center">Sign up for a new account</h2>
-  <form method="post">
+<h2 class="font-bold font-sans text-center py-8 font-sans">Sign up for a new account</h2>
+  <form  class="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Sign Up</button>
+    <button class="bg-amber-600 font-bold text-lg"type="submit">Sign Up</button>
   </form>
 
 
   {% endblock %}
+</div>
 </div>
