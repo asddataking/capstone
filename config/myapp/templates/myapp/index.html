@@ -8,17 +8,17 @@
     <div id="app">
        <!--- Hero Section-->
       <section id="section1" class="font-sans p-8">
-        <div class="flex sm:flex-col-reverse lg:flex-row-reverse">
+        <div class="flex sm: w-200 flex-col-reverse lg:flex-row-reverse">
          
           <!--- Lead Generation Form-->
           <div class="basis-1/2 pl-5 bg-slate-50">
           <h2 class="text-center text-2xl py-5"> Get a free quote Today </h2>
-        <form @submit.prevent ='emailLead' class="text-2xl">
+        <form @submit.prevent ='emailLead' class="text-2xl text-center">
 				
-          <input class="mb-3"type="text" v-model="firstName" size="40" placeholder="Please Enter your First Name">
+          <input class="mb-3"type="text" v-model="firstName" size="30" placeholder="Please Enter your First Name">
         <br>
         
-        <input class="mb-3" type="text" v-model="email" size="40" placeholder="Please Enter your Email Address">
+        <input class="mb-3" type="text" v-model="email" size="30" placeholder="Please Enter your Email Address">
         <br>
         <label for="selected">Please choose # of Dogs</label>
         <select v-model="selected" placeholder="Please Enter # of Dogs">
