@@ -30,7 +30,7 @@
         </select>
         <br>
         <div class="flex justify-center mt-4">
-				<button @click="resetForm" class="rounded-full bg-amber-600 text-xl font-semibold px-4 py-2" type="Submit">Submit</button>
+				<button class="rounded-full bg-amber-600 text-xl font-semibold px-4 py-2" type="Submit">Submit</button>
       </div>
 			  </form>
         </div>
@@ -172,15 +172,27 @@
             this.leadList.push(lead)
             console.log(lead)
             console.log(this.leadList)
+            
+            this.email = "";
+            this.firstName = "";
+            this.selected = "";
+            }
+          },
+
+         
 
 
 
-          }
+          
         
-        },
-         delimiters: ['[[', ']]'],
+        
+          delimiters: ['[[', ']]'],
+        }
       
-    }
+
+      
+    
+  
       
     Vue.createApp(App).mount('#app')
     </script>
