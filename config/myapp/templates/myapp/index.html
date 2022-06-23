@@ -12,7 +12,7 @@
          
           <!--- Lead Generation Form-->
           <div class="basis-1/2 pl-5 bg-slate-50">
-          <h2 class="text-center text-2xl py-5"> Get a free quote Today </h2>
+          <h2 class="text-center text-2xl py-5"> Get a Free Quote Today </h2>
         <form @submit.prevent ='emailLead' class="text-2xl text-center">
 				
           <input class="mb-3"type="text" v-model="firstName" size="30" placeholder="Please Enter your First Name">
@@ -30,7 +30,7 @@
         </select>
         <br>
         <div class="flex justify-center mt-4">
-				<button class="rounded-full bg-amber-600 text-xl font-semibold px-4 py-2" type="Submit">Submit</button>
+				<button @click="resetForm" class="rounded-full bg-amber-600 text-xl font-semibold px-4 py-2" type="Submit">Submit</button>
       </div>
 			  </form>
         </div>
@@ -49,7 +49,7 @@
 
       <!--- Extra section with image-->
       <section id="section2" class="pt-20">
-        <div class="flex">
+        <div class="container">
         <h3 class=" text-white font-bold text-3xl font-sans absolute pl-10 mt-24">Experience a Clean Yard</h3>  
           <img src="static/dogball.jpg" class="object-contain shadow-sm rounded-xl" alt="dog with ball outside"/>
           </div>
@@ -63,7 +63,7 @@
       <section id="section3" class=" bg-amber-600">
         
          <div class="flex justify-center pt-14">
-          <h3 class="text-4xl font-sans font-semibold">  Articles + Tips </h3>
+          <h3 class="text-4xl font-sans font-bold">  Articles + Tips </h3>
         </div>
         <div class="flex pt-5 px-5 py-5 flex-row space-x-4 justify-evenly">
           
